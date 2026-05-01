@@ -151,7 +151,7 @@ def approve_deposit(request, deposit_id):
 # --- SAQUE ---
 @login_required
 def saque(request):
-    MIN_WITHDRAWAL_AMOUNT = 2500
+    MIN_WITHDRAWAL_AMOUNT = 2000
     START_TIME = time(9, 0, 0)
     END_TIME = time(17, 0, 0)
     withdrawal_instruction = PlatformSettings.objects.first().withdrawal_instruction if PlatformSettings.objects.first() else ''
